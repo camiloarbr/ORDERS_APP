@@ -10,6 +10,11 @@ on:
 jobs:
   run-last-test:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    defaults:
+      run:
+        working-directory: orders_app
 
     steps:
       - name: Checkout repository
